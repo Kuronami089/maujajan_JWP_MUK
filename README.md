@@ -82,7 +82,16 @@ Ketik prefix berikut secara berurutan di dalam class controller:
 
 *(Catatan: Jika ingin membuat seluruh controller langsung sekaligus dalam 1 ketikan, gunakan `jwp-fc-all`)*.
 
-### 2. Urutan Pembuatan View Blade (`resources/views/admin/foods/`):
+### 2. Urutan Pembuatan Order Controller (`OrderController.php`):
+Ketik prefix berikut secara berurutan di dalam class `OrderController`:
+1. `jwp-oc-index` ➜ Fungsi `index()` (Tampil katalog menu untuk pemesanan pelanggan).
+2. `jwp-oc-store` ➜ Fungsi `store()` (Checkout transaksi multi-tabel dengan `DB::beginTransaction()` + looping rincian pesanan).
+3. `jwp-oc-dashboard` ➜ Fungsi `adminDashboard()` (Tampil rekap semua pesanan masuk admin dengan Eager Loading relasi).
+4. `jwp-oc-status` ➜ Fungsi `updateStatus()` (Ubah status pesanan: Pending / Diproses / Selesai / Dibatalkan).
+
+*(Catatan: Jika ingin membuat seluruh OrderController utuh sekaligus, gunakan `jwp-oc-all`)*.
+
+### 3. Urutan Pembuatan View Blade (`resources/views/admin/foods/`):
 - Di `index.blade.php` ➜ Ketik `jwp-v-index` (Tabel data lengkap + foto thumbnail + pagination + tombol edit & hapus).
 - Di `create.blade.php` ➜ Ketik `jwp-v-create` (Form tambah lengkap dengan `enctype="multipart/form-data"` + input gambar).
 - Di `edit.blade.php` ➜ Ketik `jwp-v-edit` (Form edit dengan `@method('PUT')` + preview value lama).
