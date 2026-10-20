@@ -6,13 +6,16 @@ use App\Http\Controllers\FoodController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 
+// Halaman utama & pemesanan pelanggan
 Route::get('/', [OrderController::class, 'index'])->name('customer.index');
 Route::post('/checkout', [OrderController::class, 'store'])->name('customer.checkout');
 
+// Dashboard admin
 Route::get('/dashboard', [OrderController::class, 'adminDashboard'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+// Manajemen data admin (wajib login)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -20,6 +23,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/admin/dashboard', [OrderController::class, 'adminDashboard'])->name('admin.dashboard');
     Route::patch('/admin/orders/{id}/status', [OrderController::class, 'updateStatus'])->name('admin.orders.updateStatus');
+    
+    // CRUD Menu Makanan & User
     Route::resource('/admin/foods', FoodController::class);
     Route::resource('/admin/users', UserController::class);
 });
