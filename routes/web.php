@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 
 // --- Rute Pelanggan (Tanpa Login) ---
 // Halaman utama / katalog menu
@@ -32,6 +33,9 @@ Route::middleware('auth')->group(function () {
     
     // Kelola menu makanan (CRUD)
     Route::resource('/admin/foods', FoodController::class);
+
+    // Kelola data pengguna (CRUD)
+    Route::resource('/admin/users', UserController::class);
 });
 
 // Rute auth (login, register, logout)

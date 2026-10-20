@@ -59,6 +59,12 @@ Login menggunakan akun admin untuk mengelola:
   * **[Update]**: Edit data menu & ganti foto makanan.
   * **[Delete]**: Hapus menu (file gambar otomatis terhapus dari server).
 
+* **Kelola User (`/admin/users`)**:
+  * **[Read]**: Melihat daftar seluruh pengguna/admin beserta role.
+  * **[Create]**: Tambah akun pengguna/admin baru dengan hashing password.
+  * **[Update]**: Edit data akun pengguna/admin & update password.
+  * **[Delete]**: Hapus akun pengguna (dilengkapi proteksi hapus diri sendiri).
+
 ---
 
 ## 💡 Catatan

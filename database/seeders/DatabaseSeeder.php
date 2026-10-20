@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin Toko',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('password123'),
+            'role' => 'admin',
         ]);
 
         // 2. Panggil Seeder Makanan

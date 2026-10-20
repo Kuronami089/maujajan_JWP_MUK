@@ -11,11 +11,15 @@
             {{-- Tombol Navigasi Cepat Admin --}}
             <div class="flex items-center gap-3">
                 {{-- Tombol menuju manajemen CRUD Makanan & Minuman --}}
-                <a href="{{ route('foods.index') }}" class="inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-indigo-700 shadow-sm transition">
-                    Kelola Menu
+                <a href="{{ route('foods.index') }}" style="background-color: #16a34a; color: #ffffff;" class="inline-flex items-center px-4 py-2 rounded-md font-semibold text-xs uppercase tracking-widest hover:opacity-90 shadow-sm transition">
+                    Kelola Makanan
+                </a>
+                {{-- Tombol menuju manajemen CRUD User --}}
+                <a href="{{ route('users.index') }}" style="background-color: #2563eb; color: #ffffff;" class="inline-flex items-center px-4 py-2 rounded-md font-semibold text-xs uppercase tracking-widest hover:opacity-90 shadow-sm transition">
+                    Kelola User
                 </a>
                 {{-- Tombol untuk membuka halaman pemesanan pelanggan di tab baru --}}
-                <a href="{{ route('customer.index') }}" target="_blank" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 shadow-sm transition">
+                <a href="{{ route('customer.index') }}" target="_blank" style="background-color: #1f2937; color: #ffffff;" class="inline-flex items-center px-4 py-2 rounded-md font-semibold text-xs uppercase tracking-widest hover:opacity-90 shadow-sm transition">
                     Lihat Menu Customer
                 </a>
             </div>

@@ -38,13 +38,6 @@ class OrderController extends Controller
         //
     }
 
-    /**
-     * Memproses dan menyimpan pesanan baru dari pelanggan ke database.
-     * URL: POST /checkout
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function store(Request $request)
     {
         // 1. Validasi input form: memastikan nama, meja, dan daftar item sesuai aturan
