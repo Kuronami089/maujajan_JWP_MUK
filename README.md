@@ -67,37 +67,6 @@ Login menggunakan akun admin untuk mengelola:
 
 ---
 
-## ⌨️ Panduan Snippets Cepat (Uji Kompetensi / Live Coding)
-
-Gunakan shortcut ini di VS Code untuk men-generate kode secara cepat dan modular satu per satu:
-
-### 1. Urutan Pembuatan Food Controller (`FoodController.php`):
-Ketik prefix berikut secara berurutan di dalam class controller:
-1. `jwp-fc-index` ➜ Fungsi `index()` (Tampil daftar menu + pagination).
-2. `jwp-fc-create` ➜ Fungsi `create()` (Tampil form tambah menu).
-3. `jwp-fc-store` ➜ Fungsi `store()` (Validasi input + upload foto ke storage + simpan DB).
-4. `jwp-fc-edit` ➜ Fungsi `edit()` (Tampil form edit menu berdasarkan ID/Model).
-5. `jwp-fc-update` ➜ Fungsi `update()` (Validasi + hapus foto lama jika ada upload baru + update data).
-6. `jwp-fc-destroy` ➜ Fungsi `destroy()` (Hapus file foto dari disk storage + hapus data DB).
-
-*(Catatan: Jika ingin membuat seluruh controller langsung sekaligus dalam 1 ketikan, gunakan `jwp-fc-all`)*.
-
-### 2. Urutan Pembuatan Order Controller (`OrderController.php`):
-Ketik prefix berikut secara berurutan di dalam class `OrderController`:
-1. `jwp-oc-index` ➜ Fungsi `index()` (Tampil katalog menu untuk pemesanan pelanggan).
-2. `jwp-oc-store` ➜ Fungsi `store()` (Checkout transaksi multi-tabel dengan `DB::beginTransaction()` + looping rincian pesanan).
-3. `jwp-oc-dashboard` ➜ Fungsi `adminDashboard()` (Tampil rekap semua pesanan masuk admin dengan Eager Loading relasi).
-4. `jwp-oc-status` ➜ Fungsi `updateStatus()` (Ubah status pesanan: Pending / Diproses / Selesai / Dibatalkan).
-
-*(Catatan: Jika ingin membuat seluruh OrderController utuh sekaligus, gunakan `jwp-oc-all`)*.
-
-### 3. Urutan Pembuatan View Blade (`resources/views/admin/foods/`):
-- Di `index.blade.php` ➜ Ketik `jwp-v-index` (Tabel data lengkap + foto thumbnail + pagination + tombol edit & hapus).
-- Di `create.blade.php` ➜ Ketik `jwp-v-create` (Form tambah lengkap dengan `enctype="multipart/form-data"` + input gambar).
-- Di `edit.blade.php` ➜ Ketik `jwp-v-edit` (Form edit dengan `@method('PUT')` + preview value lama).
-
----
-
 ## 💡 Catatan
 Jika gambar menu tidak tampil di browser, pastikan sudah menjalankan:
 ```bash
